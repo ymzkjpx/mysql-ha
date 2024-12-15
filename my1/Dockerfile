@@ -18,7 +18,7 @@ RUN dnf install -y \
 
 # セットアップ用のスクリプトを設置
 COPY my1/my.cnf /etc/my.cnf.d/my.cnf
-COPY my1/scripts/ /scripts/
+COPY scripts/ /scripts/
 RUN chmod +x -R /scripts/
 
 # ポートを公開
