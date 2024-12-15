@@ -1,0 +1,19 @@
+services:
+
+  my1:
+    build:
+      context: .
+      dockerfile: my1/Dockerfile
+    container_name: my1
+    ports:
+      - "3306:3306"
+    networks:
+      - mysql-ha-net
+    restart: always
+    privileged: true
+    stdin_open: true
+    tty: true
+
+networks:
+  mysql-ha-net:
+    driver: bridge

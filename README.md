@@ -4,14 +4,12 @@ MySQLの冗長化を練習するためのプロジェクトです。
 
 ## Setup
 
-docker-composeを起動します。
-
 ```
-docker compose up -d
+docker compose build --no-cache && docker-compose up -d
+
+docker exec -it my1 /bin/bash
+
+cd /scripts/
+
+./init/setup.sh
 ```
-
-my1とmy2コンテナが起動します。
-
-
-
-
